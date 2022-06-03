@@ -1,0 +1,867 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <ul class="tab">
+        <li><a href="#" class="link active" onclick="openTab(event,'page1')">CODES</a></li>
+        <li onclick="runit()"><a href="#" class="link" onclick="openTab(event,'page2')">OUTPUT</a></li>
+        <li><a href="#" class="link" onclick="openTab(event,'page3')">Setting</a></li>
+    </ul>
+    <div id="page1" class="content">
+        <k style="display:none"id="daaf">0</k>
+        <textarea id="code" placeholder=" HTML Codes"style="width:100%;height:80%;border:none;outline:none;background:#dddddd;border-radius:5px;font-size:8px;font-family:serif;font-weight:900;"onkeyup="daad();daah()">《Codes Here》</textarea>
+        <fieldset id="daaq"style="display:block;"></fieldset><script>
+function daad(){
+    var daac = document.getElementById("daaf")
+    if(document.getElementById("code").value.endsWith(" ") || document.getElementById("code").value.endsWith("\n")){
+        daac.innerHTML = document.getElementById("code").value.length;
+        document.getElementById("daaf").innerHTML=document.getElementById("code").value.length;
+    }else{
+        document.getElementById("daaf").innerHTML=daac.innerHTML;
+    }
+}
+function daar(text){
+    document.getElementById("code").value=document.getElementById("code").value.substr(0,Number(document.getElementById("daaf").innerHTML))
+    document.getElementById("code").value=document.getElementById("code").value+text;
+}
+function daah(){
+    var daai = ["fmt.print()","fmt.Print()","fmt.PrintLn()","System.out.print()","System.out.println()","document.write()","lcd.print()","document.write()","alert()","confirm()","prompt()","alr()","cnf()","prp()","چاپ()","print()","نوشتن()","println()","الرت()","fie()","هشدار()","hl()","بنویس()","bl()","چاپ‌کن()","a()","i()","multiLine","file()","input()","sel","select","change","img","audio","video","iframe","progress","getFullObject()","getFullArray()","printf()","print_r()","cat()","writeHTML()","dow()","col()","showMe()","rand()","Print()","PRINT()","ctArray()","nicePrint()","echo()","cout()","Printer.printIn()","BS.WL()","all","Date()","XHR()","XMLHttpRequest()","itg","innerHTML","inf","srcdoc","slc","document.querySelector","sts","style","len","length","در غیر این صورت اگر","else if","اگر با خطا مواجه شد","elif","در غیر این صورت","else","ساخت خطا","function","صحیح","true","غلط","false","متغیر","throw","ثابت","catch","تابع","while","حلقه","for","اگر","if","loop","سعی","for","def","do","in","of","try","switch","case","چاپ کن ","System.out.print ","چاپ‌کن ","document.write ","بنویس ","Printer.printI n","نوشتن ","console.log ","چاپ ","writeHTML ","nicePrint ","showMe ","fmt.Print ","lcd.print ","print_r ","printf ","PRINT ","Print ","BS.WL ","print ","echo ","cout ","dow ","text()","cat "]
+    var daac = document.getElementById("daaf")
+    var daaj = Number(daac.innerHTML)
+    var daak = document.getElementById("code").value.substr(daaj,document.getElementById("code").value.length)
+    var daal = daai
+    var daam = []
+    for(var daan of daal){
+        if(daan.startsWith(daak)){
+            daam.push(daan)
+            var daao = daal[daan]
+        }
+    }
+    var daap = ""
+    for(daan in daam){
+        daap = daap + `<button onclick="daar('${daam[daan]}')"style="width:100%;border:1px solid #000;font-size:8px;">`+daam[daan]+`</button><br>`
+    }
+    document.getElementById("daaq").innerHTML=daap
+}
+</script>
+    </div>
+    <div id="page2" class="content">
+            <div align="center">
+        OUTPUT
+<button onclick="clrOut()">CLEAR</button></div>
+        <iframe id="out"style="border:none;width:100%;height:80%;border:none;outline:none;background:#dddddd;border-radius:10px;"></iframe></div>
+        <div id="output"></div>
+        <div id="mycanvas"></div>
+    </div>
+        <div id="page3" class="content"><center>
+            <h1>Styles</h1>
+            <h2>Screen</h2>
+            Background Color : <input type="color"value="#ffffff"id="ssa"><br>
+Text Color : <input type="color"id="ssb"value="#000000">
+<h2>HTML Input</h2>
+Background Color : <input type="color"value="#dddddd"id="ssc"><br> 
+Text Color : <input type="color"value="#000000"id="ssd"><br>
+Font : <input id="sse"value="serif"><br>
+Text Size(Min:8px) : <input id="ssf"value="8px"><br>
+Text Bold(Max:900) : <input id="ssg"value="900"type="number"min="0"max="900"><br>
+Border Radius : <input id="ssh"value="5px"><br>
+<h2>Output Style</h2>
+Background Color : <input type="color"value="#dddddd"id="suc"><br>
+Border Radius : <input id="suh"value="10px"><br>
+            <button onclick="changeStyle()"id="butB">Change Style Setting</button></center><h1>Import & Export</h1>
+Encoding : <select id="encoding">
+<option>UTF-1</option>
+<option>UTF-7</option>
+<option selected>UTF-8</option>
+<option>UTF-8LE</option>
+<option>UTF-16</option>
+<option>UTF-16LE</option>
+<option>UTF-32</option>
+<option>UTF-32LE</option>
+<option>Adobe-Standard-Encoding</option>
+<option>ISO-2022-CN</option>
+<option>ISO-2022-CN-EXT</option>
+<option>ISO-2022-JP</option>
+<option>ISO-2022-JP-1</option>
+<option>ISO-2022-JP-2</option>
+<option>ISO-8859-1</option>
+<option>ISO-8859-2</option>
+<option>ISO-8859-3</option>
+<option>ISO-8859-4</option>
+<option>ISO-8859-5</option>
+<option>ISO-8859-6</option>
+<option>ISO-8859-7</option>
+<option>ISO-8859-8</option>
+<option>ISO-8859-9</option>
+<option>ISO-8859-10</option>
+<option>ISO-8859-11</option>
+<option>ISO-8859-12</option>
+<option>ISO-8859-13</option>
+<option>ISO-8859-14</option>
+<option>ISO-8859-15</option>
+<option>windows-1250</option>
+<option>windows-1251</option>
+<option>windows-1252</option>
+<option>windows-1253</option>
+<option>windows-1254</option>
+<option>windows-1255</option>
+<option>windows-1256</option>
+<option>windows-1257</option>
+<option>windows-1258</option>
+<option></option>
+</select><br>
+      <input type="file" id="readfile"style="font-size:8px;"/>
+      <button onclick="loadfile()">LOAD FiLE</button><br>Save File : <input id="filenameaaa"placeholder="FiLE NAME"><button onclick="saveFileAAA()">SAVE</button>
+<script>
+function saveDataAAA(data, fileName) {
+    var encoding = document.getElementById("encoding").value
+    var a = document.createElement("a");
+    document.body.appendChild(a);
+    a.style = "display: none";
+    var json = JSON.stringify(data),
+        blob = new Blob([data], {type: "text/hsl;charset="+encoding.toLowerCase()}),
+        url = window.URL.createObjectURL(blob);
+    a.href = url;
+    a.download = fileName;
+    a.click();
+    window.URL.revokeObjectURL(url);
+}
+function saveFileAAA() {
+  var inputdata = document.getElementById("code")
+  var filenameaaa = document.getElementById("filenameaaa").value + ".hsl"
+  saveDataAAA(inputdata.value,filenameaaa);
+  
+  e.preventDefault()
+}
+function loadfile() {
+    var encoding = document.getElementById("encoding").value
+    if(document.getElementById("readfile").files[0].name.endsWith(".hsl")==true){
+        var fileToLoad = document.getElementById("readfile").files[0];
+        var fileReader = new FileReader();    
+        fileReader.onload = function(fileLoadedEvent){
+            var textFromFileLoaded = fileLoadedEvent.target.result;
+            document.getElementById("code").value = textFromFileLoaded;
+        };
+        fileReader.readAsText(fileToLoad,encoding);
+    }else{
+        alert("ONLY SUPPORT HSL(HYPER SCRiPT LANGUAGE) FiLE")
+    }
+}
+</script>
+        </div>
+</body>
+</html>
+<style>
+ul.tab
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+ul.tab li 
+{
+    float: left;
+    border-right: 1px solid #ccc;
+}
+ul.tab li a 
+{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 8px;
+}
+ul.tab li a:hover 
+{
+    background-color: #ddd;
+}
+ul.tab li a:focus, .active 
+{
+    background-color: #ccc;
+}
+.content 
+{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+#page1 
+{
+    display: block;
+}
+button{
+    background:#ffd000;color:#4080ff;border:#4080ff;border-radius:10px;
+}
+</style>
+<script>
+
+function openTab(evt, page)
+{
+    var i, pages, links;
+    //hide all pages
+    pages = document.getElementsByClassName("content");
+    for (i = 0; i < pages.length; i++) {
+        pages[i].style.display = "none";
+    }
+    //remove active tab
+    links = document.getElementsByClassName("link");
+    for (i = 0; i < links.length; i++) {
+        links[i].className = links[i].className.replace(" active", "");
+    }
+    //set active page and tab
+    document.getElementById(page).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function runit() {
+    var outH = document.querySelector("#code").value
+    var startscript = "<scr"+"ipt>"
+var sscript2 = `<`+`script src="./00.js"><`+`/scri`+`pt>`+`<`+`script src="./01.js"><`+`/scri`+`pt>`+`<`+`script src="./02.js"><`+`/scri`+`pt>`+`<`+`script src="./03.js"><`+`/scri`+`pt>`+`<`+`script src="./04.js"><`+`/scri`+`pt>`+`<`+`script src="./05.js"><`+`/scri`+`pt>`+`<`+`script src="./06.js"><`+`/scri`+`pt>`+`<`+`script src="./07.js"><`+`/scri`+`pt>`+`<`+`script src="./08.js"><`+`/scri`+`pt>`+`<`+`script src="./09.js"><`+`/scri`+`pt>`+`<`+`script src="./0A.js"><`+`/scri`+`pt>`+`<`+`script src="./0B.js"><`+`/scri`+`pt>`+`<`+`script src="./0C.js"><`+`/scri`+`pt>`+`<`+`script src="./0D.js"><`+`/scri`+`pt>`+`<scr`+`ipt>`+`eruda.init(), eruda.get("console").config.set("displayGetterVal", !0)<`+`/scr`+`ipt>\n`;
+    var endscript = `<`+`/script`+`>`
+    var lenHH = outH.length
+    for(var bHH=0;bHH<lenHH;bHH++){
+        outHc = outH.replace("slc","document.querySelector")
+        outH = outHc
+        outHc = outH.replace("itg",".innerHTML")
+        outH = outHc
+        outHc = outH.replace("inf",".srcdoc")
+        outH = outHc
+        outHc = outH.replace("elif","else if")
+        outH = outHc
+        outHc = outH.replace("sts",".style")
+        outH = outHc
+        outHc = outH.replace("XHR","XMLHttpRequest")
+        outH = outHc
+        outHc = outH.replace("-len",".length")
+        outH = outHc
+        outHc = outH.replace("تابع","function")
+        outH = outHc
+        outHc = outH.replace("اگر","if")
+        outH = outHc
+        outHc = outH.replace("در غیر این صورت","else")
+        outH = outHc
+        outHc = outH.replace("در غیر این صورت اگر","else if")
+        outHc = outH.replace("متد","method")
+        outH = outHc
+        outHc = outH.replace("حلقه","for")
+        outH = outHc
+        outHc = outH.replace("جدید","new")
+        outH = outHc
+        outHc = outH.replace("غلط","false")
+        outH = outHc
+        outHc = outH.replace("صحیح","true")
+        outH = outHc
+        outHc = outH.replace("۱","1")
+        outH = outHc
+        outHc = outH.replace("۲","2")
+        outH = outHc
+        outHc = outH.replace("۳","3")
+        outH = outHc
+        outHc = outH.replace("۴","4")
+        outH = outHc
+        outHc = outH.replace("۵","5")
+        outH = outHc
+        outHc = outH.replace("۶","6")
+        outH = outHc
+        outHc = outH.replace("۷","7")
+        outH = outHc
+        outHc = outH.replace("۸","8")
+        outH = outHc
+        outHc = outH.replace("۹","9")
+        outH = outHc
+        outHc = outH.replace("۰","0")
+        outH = outHc
+        outHc = outH.replace("loop","for")
+        outH = outHc
+        outHc = outH.replace("سعی","try")
+        outH = outHc
+        outHc = outH.replace("اگر با خطا مواجه شد","catch")
+        outH = outHc
+        outHc = outH.replace("ساخت خطا","throw")
+        outH = outHc
+        outHc = outH.replace("《","/"+"*COMMENT<!--")
+        outH = outHc
+        outHc = outH.replace("》","-->*"+"/")
+        outH = outHc
+        outHc = outH.replace("متغیر","var")
+        outH = outHc
+        outHc = outH.replace("ثابت","const")
+        outH = outHc
+        outHc = outH.replace("val ","const ")
+        outH = outHc
+        outH.replace("<css>",`<style>`)
+        outH = outHc
+        outH.replace("</css>",`</style>`)
+        outH = outHc
+        outHc = outH.replace("&a",'+""+')
+        outH = outHc
+        outHc = outH.replace("&A",'+""+')
+        outH = outH
+        outHc = outH.replace("def","function")
+        outH = outH
+        outHc = outH.replace("&t32;","                                                                                                                                ")
+        outH = outHc
+        outHc = outH.replace("&t31;","                                                                                                                            ")
+        outH = outHc
+        outHc = outH.replace("&t30;","                                                                                                                        ")
+        outH = outHc
+        outHc = outH.replace("&t30;","                                                                                                                        ")
+        outH = outHc
+        outHc = outH.replace("&t29;","                                                                                                                    ")
+        outH = outHc
+        outHc = outH.replace("&t28;","                                                                                                                ")
+        outH = outHc
+        outHc = outH.replace("&t27;","                                                                                                            ")
+        outH = outHc
+        outHc = outH.replace("&t26;","                                                                                                         ")
+        outH = outHc
+        outHc = outH.replace("&t25;","                                                                                                    ")
+        outH = outHc
+        outHc = outH.replace("&t24;","                                                                                                 ")
+        outH = outHc
+        outHc = outH.replace("&t23;","                                                                                            ")
+        outH = outHc
+        outHc = outH.replace("&t22;","                                                                                        ")
+        outH = outHc
+        outHc = outH.replace("&t21;","                                                                                    ")
+        outH = outHc
+        outHc = outH.replace("&t20;","                                                                                ")
+        outH = outHc
+        outHc = outH.replace("&t19;","                                                                            ")
+        outH = outHc
+        outHc = outH.replace("&t18;","                                                                        ")
+        outH = outHc
+        outHc = outH.replace("&t18;","                                                                    ")
+        outH = outHc
+        outHc = outH.replace("&t17;","                                                                    ")
+        outH = outHc
+        outHc = outH.replace("&t16;","                                                                ")
+        outH = outHc
+        outHc = outH.replace("&t15;","                                                            ")
+        outH = outHc
+        outHc = outH.replace("&t14;","                                                        ")
+        outH = outHc
+        outHc = outH.replace("&t13;","                                                    ")
+        outH = outHc
+        outHc = outH.replace("&t12;","                                                ")
+        outH = outHc
+        outHc = outH.replace("&t11;","                                            ")
+        outH = outHc
+        outHc = outH.replace("&t10;","                                         ")
+        outH = outHc
+        outHc = outH.replace("&t9;","                                     ")
+        outH = outHc
+        outHc = outH.replace("&t8;","                                ")
+        outH = outHc
+        outHc = outH.replace("&t7;","                            ")
+        outH = outHc
+        outHc = outH.replace("&t6;","                        ")
+        outH = outHc
+        outHc = outH.replace("&t5;","                    ")
+        outH = outHc
+        outHc = outH.replace("&t4;","                ")
+        outH = outHc
+        outHc = outH.replace("&t3;","            ")
+        outH = outHc
+        outHc = outH.replace("&t2;","        ")
+        outH = outHc
+        outHc = outH.replace("&t1;","    ")
+        outH = outHc
+        outHc = outH.replace("&t0;","")
+        outH = outHc
+    }
+    var lenHH = outH.length
+    for(var bHH=0;bHH<lenHH;bHH++){
+        outHc = outH.replace("documentument","document")
+        outH = outHc
+    }
+    var baac = ""
+    var baad = ""
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="P"&&outH.charAt(baaa+1)=="R"&&outH.charAt(baaa+2)=="I"&&outH.charAt(baaa+3)=="N"&&outH.charAt(baaa+4)=="T"&&outH.charAt(baaa+5)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+6) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+6)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("PRINT ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="P"&&outH.charAt(baaa+1)=="r"&&outH.charAt(baaa+2)=="i"&&outH.charAt(baaa+3)=="n"&&outH.charAt(baaa+4)=="t"&&outH.charAt(baaa+5)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+6) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+6)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("Print ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="p"&&outH.charAt(baaa+1)=="r"&&outH.charAt(baaa+2)=="i"&&outH.charAt(baaa+3)=="n"&&outH.charAt(baaa+4)=="t"&&outH.charAt(baaa+5)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+6) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+6)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("print ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="چ"&&outH.charAt(baaa+1)=="ا"&&outH.charAt(baaa+2)=="پ"&&outH.charAt(baaa+3)==" "&&outH.charAt(baaa+4)=="ک"&&outH.charAt(baaa+5)=="ن"&&outH.charAt(baaa+6)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+7) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+7)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("چاپ کن ",baaf)
+    }
+   for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="s"&&outH.charAt(baaa+1)=="h"&&outH.charAt(baaa+2)=="o"&&outH.charAt(baaa+3)=="w"&&outH.charAt(baaa+4)=="M"&&outH.charAt(baaa+5)=="e"&&outH.charAt(baaa+6)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+7) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+7)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("showMe ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="e"&&outH.charAt(baaa+1)=="c"&&outH.charAt(baaa+2)=="h"&&outH.charAt(baaa+3)=="o"&&outH.charAt(baaa+4)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+5) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+5)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("echo ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="c"&&outH.charAt(baaa+1)=="o"&&outH.charAt(baaa+2)=="u"&&outH.charAt(baaa+3)=="t"&&outH.charAt(baaa+4)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+5) == ";"){
+                    try{ baad = baad + eval(baac) + "<br>" }catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+5)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("cout ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="چ"&&outH.charAt(baaa+1)=="ا"&&outH.charAt(baaa+2)=="پ"&&outH.charAt(baaa+3)=="‌"&&outH.charAt(baaa+4)=="ک"&&outH.charAt(baaa+5)=="ن"&&outH.charAt(baaa+6)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+7) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+7)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("چاپ‌کن ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="ب"&&outH.charAt(baaa+1)=="ن"&&outH.charAt(baaa+2)=="و"&&outH.charAt(baaa+3)=="ی"&&outH.charAt(baaa+4)=="س"&&outH.charAt(baaa+5)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+6) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+6)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("بنویس ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="ن"&&outH.charAt(baaa+1)=="و"&&outH.charAt(baaa+2)=="ش"&&outH.charAt(baaa+3)=="ت"&&outH.charAt(baaa+4)=="ن"&&outH.charAt(baaa+5)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+6) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+6)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("نوشتن ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="چ"&&outH.charAt(baaa+1)=="ا"&&outH.charAt(baaa+2)=="پ"&&outH.charAt(baaa+3)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+4) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+4)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("چاپ ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="S"&&outH.charAt(baaa+1)=="y"&&outH.charAt(baaa+2)=="s"&&outH.charAt(baaa+3)=="t"&&outH.charAt(baaa+4)=="e"&&outH.charAt(baaa+5)=="m"&&outH.charAt(baaa+6)=="."&&outH.charAt(baaa+7)=="o"&&outH.charAt(baaa+8)=="u"&&outH.charAt(baaa+9)=="t"&&outH.charAt(baaa+10)=="."&&outH.charAt(baaa+11)=="p"&&outH.charAt(baaa+12)=="r"&&outH.charAt(baaa+13)=="i"&&outH.charAt(baaa+14)=="n"&&outH.charAt(baaa+15)=="t"&&outH.charAt(baaa+16)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+17) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+17)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("System.out.print ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="d"&&outH.charAt(baaa+1)=="o"&&outH.charAt(baaa+2)=="c"&&outH.charAt(baaa+3)=="u"&&outH.charAt(baaa+4)=="m"&&outH.charAt(baaa+5)=="e"&&outH.charAt(baaa+6)=="n"&&outH.charAt(baaa+7)=="t"&&outH.charAt(baaa+8)=="."&&outH.charAt(baaa+9)=="w"&&outH.charAt(baaa+10)=="r"&&outH.charAt(baaa+11)=="i"&&outH.charAt(baaa+12)=="t"&&outH.charAt(baaa+13)=="e"&&outH.charAt(baaa+14)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+15) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+15)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("document.write ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="c"&&outH.charAt(baaa+1)=="o"&&outH.charAt(baaa+2)=="n"&&outH.charAt(baaa+3)=="s"&&outH.charAt(baaa+4)=="o"&&outH.charAt(baaa+5)=="l"&&outH.charAt(baaa+6)=="e"&&outH.charAt(baaa+7)=="."&&outH.charAt(baaa+8)=="l"&&outH.charAt(baaa+9)=="o"&&outH.charAt(baaa+10)=="g"&&outH.charAt(baaa+11)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+12) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+12)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("console.log ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="w"&&outH.charAt(baaa+1)=="r"&&outH.charAt(baaa+2)=="i"&&outH.charAt(baaa+3)=="t"&&outH.charAt(baaa+4)=="e"&&outH.charAt(baaa+5)=="H"&&outH.charAt(baaa+6)=="T"&&outH.charAt(baaa+7)=="M"&&outH.charAt(baaa+8)=="L"&&outH.charAt(baaa+9)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+10) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+10)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("writeHTML ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="n"&&outH.charAt(baaa+1)=="i"&&outH.charAt(baaa+2)=="c"&&outH.charAt(baaa+3)=="e"&&outH.charAt(baaa+4)=="P"&&outH.charAt(baaa+5)=="r"&&outH.charAt(baaa+6)=="i"&&outH.charAt(baaa+7)=="n"&&outH.charAt(baaa+8)=="t"&&outH.charAt(baaa+9)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+10) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+10)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("nicePrint ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="l"&&outH.charAt(baaa+1)=="c"&&outH.charAt(baaa+2)=="d"&&outH.charAt(baaa+3)=="."&&outH.charAt(baaa+4)=="w"&&outH.charAt(baaa+5)=="r"&&outH.charAt(baaa+6)=="i"&&outH.charAt(baaa+7)=="t"&&outH.charAt(baaa+8)=="e"&&outH.charAt(baaa+9)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+10) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+10)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("lcd.Print ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="f"&&outH.charAt(baaa+1)=="m"&&outH.charAt(baaa+2)=="t"&&outH.charAt(baaa+3)=="."&&outH.charAt(baaa+4)=="w"&&outH.charAt(baaa+5)=="r"&&outH.charAt(baaa+6)=="i"&&outH.charAt(baaa+7)=="t"&&outH.charAt(baaa+8)=="e"&&outH.charAt(baaa+9)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+10) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+10)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("fmt.Print ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="p"&&outH.charAt(baaa+1)=="r"&&outH.charAt(baaa+2)=="i"&&outH.charAt(baaa+3)=="n"&&outH.charAt(baaa+4)=="t"&&outH.charAt(baaa+5)=="_"&&outH.charAt(baaa+6)=="r"&&outH.charAt(baaa+7)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+8) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+8)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("print_r ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="p"&&outH.charAt(baaa+1)=="r"&&outH.charAt(baaa+2)=="i"&&outH.charAt(baaa+3)=="n"&&outH.charAt(baaa+4)=="t"&&outH.charAt(baaa+5)=="f"&&outH.charAt(baaa+6)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+7) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+7)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("printf ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="d"&&outH.charAt(baaa+1)=="o"&&outH.charAt(baaa+2)=="w"&&outH.charAt(baaa+3)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+4) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+4)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("dow ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="c"&&outH.charAt(baaa+1)=="a"&&outH.charAt(baaa+2)=="t"&&outH.charAt(baaa+3)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+4) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+4)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("cat ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="P"&&outH.charAt(baaa+1)=="r"&&outH.charAt(baaa+2)=="i"&&outH.charAt(baaa+3)=="n"&&outH.charAt(baaa+4)=="t"&&outH.charAt(baaa+5)=="e"&&outH.charAt(baaa+6)=="r"&&outH.charAt(baaa+7)=="."&&outH.charAt(baaa+8)=="p"&&outH.charAt(baaa+9)=="r"&&outH.charAt(baaa+10)=="i"&&outH.charAt(baaa+11)=="n"&&outH.charAt(baaa+12)=="t"&&outH.charAt(baaa+13)=="I"&&outH.charAt(baaa+14)=="n"&&outH.charAt(baaa+15)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+16) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+16)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("Printer.printIn ",baaf)
+    }
+    for(baaa=0;baaa<outH.length;baaa++){
+        if(outH.charAt(baaa)=="B"&&outH.charAt(baaa+1)=="S"&&outH.charAt(baaa+2)=="."&&outH.charAt(baaa+3)=="W"&&outH.charAt(baaa+4)=="L"&&outH.charAt(baaa+5)==" "){
+            for(baab=0;baab<outH.length;baab++){
+                if(outH.charAt(baab+baaa+6) == ";"){
+                    try{baad = baad + eval(baac) + "<br>"}catch(baai){
+                        baad = baad + `<font color="red">`+baai+`</font>` + `<br>`
+                    }
+                    baac = ""
+                    break
+                }else{
+                    baac = baac + outH.charAt(baaa+baab+6)
+                }
+            }
+        }
+    }
+    var baaf = "//"
+    for(baae=0;baae<outH.length;baae++){
+        outH = outH.replace("BS.WL ",baaf)
+    }
+       document.getElementById("output").innerHTML="";
+       var outPB = document.querySelector("#mycanvas").innerHTML + document.getElementById("output").innerHTML;
+    document.querySelector("#mycanvas").innerHTML=""
+    for(aaba=0;aaba<outH.length;aaba++){
+        outHc = outH.replace("{hsl}:",startscript)
+        outH = outHc
+        outHc = outH.replace("{html}:",endscript)
+        outH = outHc
+    }
+    document.querySelector("#out").srcdoc = baad + sscript2 + startscript + outH + endscript + outPB;
+//    document.querySelector("#out").srcdoc = outH
+}
+function clrOut(){ document.getElementById("output").innerHTML = "";document.querySelector("#out").srcdoc = ""}
+function changeStyle(){
+    document.bgColor = document.getElementById("ssa").value;
+    document.fgColor = document.getElementById("ssb").value;
+    document.getElementById("code").style.backgroundColor = document.getElementById("ssc").value;
+    document.getElementById("code").style.color = document.getElementById("ssd").value;
+    document.getElementById("code").style.fontFamily = document.getElementById("sse").value;
+    document.getElementById("code").style.fontSize = document.getElementById("ssf").value;
+    document.getElementById("code").style.fontWeight = document.getElementById("ssg").value;
+    document.getElementById("code").style.borderRadius = document.getElementById("ssh").value;
+    document.getElementById("out").style.backgroundColor = document.getElementById("suc").value;
+    document.getElementById("out").style.borderRadius = document.getElementById("suh").value;
+}
+</script>
