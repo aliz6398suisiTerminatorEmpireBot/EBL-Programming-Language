@@ -1,5 +1,8 @@
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<script>
+var amma = eval(prompt("Change Page width انتخاب عرض صفحه"))
+var ammb = screen.width / amma
+document.write(`<`+`meta name="viewport" content="width=${amma}, initial-scale=${ammb}, minimum-scale=${ammb}"`+` /`+`>`)
+</script>
     <ul class="tab">
         <li><a href="#" class="link active" onclick="openTab(event,'page1')">CODES</a></li>
         <li onclick="runit()"><a href="#" class="link" onclick="openTab(event,'page2')">OUTPUT</a></li>
