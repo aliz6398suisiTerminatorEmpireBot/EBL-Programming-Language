@@ -1,3 +1,4 @@
+
 <script>
 var amma = eval(prompt("Change Page width انتخاب عرض صفحه"))
 var ammb = screen.width / amma
@@ -10,49 +11,26 @@ document.write(`<`+`meta name="viewport" content="width=${amma}, initial-scale=$
     </ul>
     <div id="page1" class="content">
         <k style="display:none"id="daaf">0</k>
-        <textarea id="code" placeholder=" HTML Codes"style="width:100%;height:80%;border:none;outline:none;background:#dddddd;border-radius:5px;font-size:8px;font-family:serif;font-weight:900;"onkeyup="daad();daah()">《Codes Here》</textarea>
-        <fieldset id="daaq"style="display:block;"></fieldset><script>
-function daad(){
-    var daac = document.getElementById("daaf")
-    if(document.getElementById("code").value.endsWith(" ") || document.getElementById("code").value.endsWith("\n")){
-        daac.innerHTML = document.getElementById("code").value.length;
-        document.getElementById("daaf").innerHTML=document.getElementById("code").value.length;
-    }else{
-        document.getElementById("daaf").innerHTML=daac.innerHTML;
+        <textarea id="code" placeholder=" HTML Codes"style="width:100%;height:80%;border:none;outline:none;background:#dddddd;border-radius:5px;font-size:8px;font-family:serif;font-weight:900;"onkeyup="">《Codes Here》</textarea>
+<script>
+function cookiesaver(){
+    if(localStorage.getItem("hslCodes") != null && document.getElementById("code").value == "《Codes Here》"){
+        document.getElementById("code").value = localStorage.getItem("hslCodes")
+    }else if(localStorage.getItem("hslCodes") == null){
+        localStorage.setItem("hslCodes",document.getElementById("code").value)
+    }else if(localStorage.getItem("hslCodes") != null){
+        localStorage.setItem("hslCodes",document.getElementById("code").value)
     }
 }
-function daar(text){
-    document.getElementById("code").value=document.getElementById("code").value.substr(0,Number(document.getElementById("daaf").innerHTML))
-    document.getElementById("code").value=document.getElementById("code").value+text;
-}
-function daah(){
-    var daai = ["fmt.print()","fmt.Print()","fmt.PrintLn()","System.out.print()","System.out.println()","document.write()","lcd.print()","document.write()","alert()","confirm()","prompt()","alr()","cnf()","prp()","چاپ()","print()","نوشتن()","println()","الرت()","fie()","هشدار()","hl()","بنویس()","bl()","چاپ‌کن()","a()","i()","multiLine","file()","input()","sel","select","change","img","audio","video","iframe","progress","getFullObject()","getFullArray()","printf()","print_r()","cat()","writeHTML()","dow()","col()","showMe()","rand()","Print()","PRINT()","ctArray()","nicePrint()","echo()","cout()","Printer.printIn()","BS.WL()","all","Date()","XHR()","XMLHttpRequest()","itg","innerHTML","inf","srcdoc","slc","document.querySelector","sts","style","len","length","در غیر این صورت اگر","else if","اگر با خطا مواجه شد","elif","در غیر این صورت","else","ساخت خطا","function","صحیح","true","غلط","false","متغیر","throw","ثابت","catch","تابع","while","حلقه","for","اگر","if","loop","سعی","for","def","do","in","of","try","switch","case","چاپ کن ","System.out.print ","چاپ‌کن ","document.write ","بنویس ","Printer.printI n","نوشتن ","console.log ","چاپ ","writeHTML ","nicePrint ","showMe ","fmt.Print ","lcd.print ","print_r ","printf ","PRINT ","Print ","BS.WL ","print ","echo ","cout ","dow ","text()","cat "]
-    var daac = document.getElementById("daaf")
-    var daaj = Number(daac.innerHTML)
-    var daak = document.getElementById("code").value.substr(daaj,document.getElementById("code").value.length)
-    var daal = daai
-    var daam = []
-    for(var daan of daal){
-        if(daan.startsWith(daak)){
-            daam.push(daan)
-            var daao = daal[daan]
-        }
-    }
-    var daap = ""
-    for(daan in daam){
-        daap = daap + `<button onclick="daar('${daam[daan]}')"style="width:100%;border:1px solid #000;font-size:8px;">`+daam[daan]+`</button><br>`
-    }
-    document.getElementById("daaq").innerHTML=daap
-}
+setInterval(cookiesaver,1000);
 </script>
     </div>
     <div id="page2" class="content">
             <div align="center">
         OUTPUT
 <button onclick="clrOut()">CLEAR</button></div>
-        <iframe id="out"style="border:none;width:100%;height:80%;border:none;outline:none;background:#dddddd;border-radius:10px;"></iframe></div>
-        <div id="output"></div>
-        <div id="mycanvas"></div>
+        <div id="output" ></div>
+        <iframe id="out" style="border:none;width:100%;height:80%;border:none;outline:none;background:#dddddd;border-radius:10px;"></iframe></div>
     </div>
         <div id="page3" class="content"><center>
             <h1>Styles</h1>
@@ -225,7 +203,7 @@ function openTab(evt, page)
 function runit() {
     var outH = document.querySelector("#code").value
     var startscript = "<scr"+"ipt>"
-var sscript2 = `<`+`script src="./00.js"><`+`/scri`+`pt>`+`<`+`script src="./01.js"><`+`/scri`+`pt>`+`<`+`script src="./02.js"><`+`/scri`+`pt>`+`<`+`script src="./03.js"><`+`/scri`+`pt>`+`<`+`script src="./04.js"><`+`/scri`+`pt>`+`<`+`script src="./05.js"><`+`/scri`+`pt>`+`<`+`script src="./06.js"><`+`/scri`+`pt>`+`<`+`script src="./07.js"><`+`/scri`+`pt>`+`<`+`script src="./08.js"><`+`/scri`+`pt>`+`<`+`script src="./09.js"><`+`/scri`+`pt>`+`<`+`script src="./0A.js"><`+`/scri`+`pt>`+`<`+`script src="./0B.js"><`+`/scri`+`pt>`+`<`+`script src="./0C.js"><`+`/scri`+`pt>`+`<`+`script src="./0D.js"><`+`/scri`+`pt>`+`<scr`+`ipt>`+`eruda.init(), eruda.get("console").config.set("displayGetterVal", !0)<`+`/scr`+`ipt>\n`;
+var sscript2 = `<`+`script src="./00.js"><`+`/scri`+`pt>`+`<`+`script src="./01.js"><`+`/scri`+`pt>`+`<`+`script src="./02.js"><`+`/scri`+`pt>`+`<`+`script src="./03.js"><`+`/scri`+`pt>`+`<`+`script src="./04.js"><`+`/scri`+`pt>`+`<`+`script src="./05.js"><`+`/scri`+`pt>`+`<`+`script src="./06.js"><`+`/scri`+`pt>`+`<`+`script src="./0A.js"><`+`/scri`+`pt>`+`<`+`script src="./0B.js"><`+`/scri`+`pt>`+`<`+`script src="./0C.js"><`+`/scri`+`pt>`+`<`+`script src="./0D.js"><`+`/scri`+`pt>`+`<`+`script src="./09.js"><`+`/scri`+`pt>`+`<`+`script src="./07.js"><`+`/scri`+`pt>`+`<`+`script src="./08.js"><`+`/scri`+`pt>`+`<scr`+`ipt>`+`eruda.init(), eruda.get("console").config.set("displayGetterVal", !0)<`+`/scr`+`ipt>\n`;
     var endscript = `<`+`/script`+`>`
     var lenHH = outH.length
     for(var bHH=0;bHH<lenHH;bHH++){
@@ -251,8 +229,6 @@ var sscript2 = `<`+`script src="./00.js"><`+`/scri`+`pt>`+`<`+`script src="./01.
         outH = outHc
         outHc = outH.replace("در غیر این صورت اگر","else if")
         outHc = outH.replace("متد","method")
-        outH = outHc
-        outHc = outH.replace("حلقه","for")
         outH = outHc
         outHc = outH.replace("جدید","new")
         outH = outHc
@@ -280,8 +256,6 @@ var sscript2 = `<`+`script src="./00.js"><`+`/scri`+`pt>`+`<`+`script src="./01.
         outH = outHc
         outHc = outH.replace("۰","0")
         outH = outHc
-        outHc = outH.replace("loop","for")
-        outH = outHc
         outHc = outH.replace("سعی","try")
         outH = outHc
         outHc = outH.replace("اگر با خطا مواجه شد","catch")
@@ -302,11 +276,19 @@ var sscript2 = `<`+`script src="./00.js"><`+`/scri`+`pt>`+`<`+`script src="./01.
         outH = outHc
         outH.replace("</css>",`</style>`)
         outH = outHc
+        outH.replace("<js>",`<`+`script`+`>`)
+        outH = outHc
+        outH.replace("</js>",`<`+`/script`+`>`)
+        outH = outHc
         outHc = outH.replace("&a",'+""+')
         outH = outHc
         outHc = outH.replace("&A",'+""+')
         outH = outH
         outHc = outH.replace("def","function")
+        outH = outH
+        outHc = outH.replace("Fun","function")
+        outH = outH
+        outHc = outH.replace("fun","function")
         outH = outH
         outHc = outH.replace("&t32;","                                                                                                                                ")
         outH = outHc
@@ -383,6 +365,8 @@ var sscript2 = `<`+`script src="./00.js"><`+`/scri`+`pt>`+`<`+`script src="./01.
     for(var bHH=0;bHH<lenHH;bHH++){
         outHc = outH.replace("documentument","document")
         outH = outHc
+        outHc = outH.replace("functionction","function")
+        outH = outH
     }
     var baac = ""
     var baad = ""
@@ -842,19 +826,15 @@ var sscript2 = `<`+`script src="./00.js"><`+`/scri`+`pt>`+`<`+`script src="./01.
     for(baae=0;baae<outH.length;baae++){
         outH = outH.replace("BS.WL ",baaf)
     }
-       document.getElementById("output").innerHTML="";
-       var outPB = document.querySelector("#mycanvas").innerHTML + document.getElementById("output").innerHTML;
-    document.querySelector("#mycanvas").innerHTML=""
     for(aaba=0;aaba<outH.length;aaba++){
         outHc = outH.replace("{hsl}:",startscript)
         outH = outHc
         outHc = outH.replace("{html}:",endscript)
         outH = outHc
     }
-    document.querySelector("#out").srcdoc = baad + sscript2 + startscript + outH + endscript + outPB;
-//    document.querySelector("#out").srcdoc = outH
+        document.getElementById("out").srcdoc = baad + sscript2 + startscript + outH + endscript
 }
-function clrOut(){ document.getElementById("output").innerHTML = "";document.querySelector("#out").srcdoc = ""}
+function clrOut(){document.querySelector("#out").srcdoc = ""}
 function changeStyle(){
     document.bgColor = document.getElementById("ssa").value;
     document.fgColor = document.getElementById("ssb").value;
