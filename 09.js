@@ -122,4 +122,47 @@ function dota(ad1,ad2){
     }
     return xxx1
 }
+function sortBubble(arr){
+    if(arr == undefined){
+        throw new TypeError("Array is not defined");
+    }
+    if(typeof arr != "object"){
+        throw new TypeError("input not a Array")
+    }
+    var len = arr.length
+    var temp;
+    for(var i=0;i<len;i++){
+        for(var j=0;j<len;j++){
+            if(arr[j] > arr[j+1]){
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+            }
+        }
+    }
+    return arr;
+}
+var hslStringHider = {
+    "hide":function (i){
+        var a = btoa(i);
+        var b = ""
+        for(var c=0;c<a.length;c++){
+            b = b + (Math.round(Math.random()*36)).toString(36) + a.charAt(c)
+        }
+        return b
+    },
+    "show":function hideBawfln(i){
+        var a = ""
+        var c = i
+        for(var b=0;b<i.length;b++){
+            if(b % 2 == 0){
+                
+            }else{
+                a = a + c.charAt(b)
+            }
+        }
+        return atob(a)
+    }
+
+}
 var all = window
