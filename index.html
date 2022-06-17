@@ -97,7 +97,7 @@ function saveDataAAA(data, fileName) {
     document.body.appendChild(a);
     a.style = "display: none";
     var json = JSON.stringify(data),
-        blob = new Blob([data], {type: "text/hsl;charset="+encoding.toLowerCase()}),
+        blob = new Blob([data], {type: "text/ebl;charset="+encoding.toLowerCase()}),
         url = window.URL.createObjectURL(blob);
     a.href = url;
     a.download = fileName;
@@ -106,14 +106,14 @@ function saveDataAAA(data, fileName) {
 }
 function saveFileAAA() {
   var inputdata = document.getElementById("code")
-  var filenameaaa = document.getElementById("filenameaaa").value + ".hsl"
+  var filenameaaa = document.getElementById("filenameaaa").value + ".ebl"
   saveDataAAA(inputdata.value,filenameaaa);
   
   e.preventDefault()
 }
 function loadfile() {
     var encoding = document.getElementById("encoding").value
-    if(document.getElementById("readfile").files[0].name.endsWith(".hsl")==true){
+    if(document.getElementById("readfile").files[0].name.endsWith(".ebl")==true){
         var fileToLoad = document.getElementById("readfile").files[0];
         var fileReader = new FileReader();    
         fileReader.onload = function(fileLoadedEvent){
@@ -122,7 +122,7 @@ function loadfile() {
         };
         fileReader.readAsText(fileToLoad,encoding);
     }else{
-        alert("ONLY SUPPORT HSL(HYPER SCRiPT LANGUAGE) FiLE")
+        alert("ONLY SUPPORT ebl(HYPER SCRiPT LANGUAGE) FiLE")
     }
 }
 </script>
